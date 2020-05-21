@@ -1,0 +1,27 @@
+// _base.scss 
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    font-family: BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+h1,h2,h3,h4,h5 {
+    line-height: 1.2;
+}
+a {
+    color: #121212;
+    text-decoration: none;
+}
+ul,ol {
+    list-style: none;
+    padding: 0;
+}
+p{
+    margin-bottom: 0;
+}

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>第六週作業-Hex</title>
+  <!-- CSS全部先放前面js放後面,速度才不會慢 -->  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">  
+  <!-- 自訂 css -->
+  <link rel="stylesheet" href="./assets/style/all.css">
+  
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="siderbar bold">
+      <ul class="menu">
+        <li><img src="../assets/images/logo-ANSWER.svg" alt=""></li>
+        <li><a href="#"><i class="material-icons ">insert_chart</i> Dashboard</a></li>
+        <li><a href="#"><i class="material-icons ">forum</i> Question</a></li>
+        <li><a href="assignment.html"><i class="material-icons ">assignment</i> Assignment</a></li>
+        <li><a href="#"><i class="material-icons ">video_library</i> Course</a></li>
+        <li><a href="index.html"><i class="material-icons ">supervisor_account</i> Admin</a></li>
+        <li><a href="#"><i class="material-icons ">settings</i> Settings</a></li>
+      </ul>
+      <div class="user d-flex justify-content-center">
+        <!-- 大頭貼 -->
+        <div class="user-img">
+          <img src="../assets/images/andychen.jpeg" alt="">
+        </div>
+        <div class="user-email">
+          <span> Andy Chen </span><br>
+          <span> andy0401@mail.com
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+<!-- admin page: -->
+<main class="main bg-white">
+  <!-- header -->
+  <header class="admin-header">
+    <ul class="header d-flex align-items-end">
+      <li class="fz-h2">Admin</li>      
+      <li class="fz-16h24 add-new">
+        <!-- Button:Add New admin  -->
+        <!-- <button type="button" class="btn btn-link" data-toggle="modal" data-target="#admin-addnew"></button> -->
+        <a href="#" class="text-dark" data-toggle="modal" data-target="#admin-addnew">
+            <i class="fas fa-plus"></i> Add New Admin
+        </a>        
+        <!-- Add New Modal:begin -->
+        <div class="modal fade" id="admin-addnew" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog 
+              modal-dialog-scrollable addnew-container" role="document">
+
+            <!-- New Admin 表單 -->
+            <form class="add-form" action="" method="post">
+
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="fz-h2 modal-title" id="exampleModalLabel">New Admin</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <!-- New Admin 表單 -->
+                  <form class="add-form" action="" method="post">
+                    <p class="fz-20h33 mb-16">Account</p>
+                    <label>Name</label><br>
+                    <input class="form-fields mb-16" type="text">
+                    <br>
+                    <label>Email</label><br>
+                    <input class="form-fields " type="text">
+                    <hr>
+                    <p class="fz-20h33 mb-16">Verification</p>
+                    <div class="verified d-flex justify-content-between">
+                      <p>
+                        <i class="material-icons" style="color:#E3006E">warning</i> Unverified</p>
+                      <span>2020/4/12</span>
+                    </div>
+                    <button type="button" class="btn btn-outline-success sendmail">Send Verification Mail</button>
+
+                    <hr>
+                    <p class="fz-20h33 mb-16">Access Level</p>
+                    <div class="dropdown">
+                      <button class="btn  access-level" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <div class="d-flex">
+                          <span> -Choose access level- </span>
+                          <span class="material-icons ml-auto">
+                            keyboard_arrow_down
+                          </span>
+                        </div>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Level-A</a>
+                        <a class="dropdown-item" href="#">Level-B</a>
+                        <a class="dropdown-item" href="#">Level-C</a>
+                      </div>
+                    </div>
+
+                    <hr>
+                    <p class="fz-20h33 mb-16">Custom Access</p>
+                    <div class="custom-access">
+                      <p><input type="checkbox" name="" id=""> Lecture</p>
+                      <p><input type="checkbox" name="" id=""> Coupon</p>
+                      <p><input type="checkbox" name="" id=""> Message</p>
+                      <p><input type="checkbox" name="" id=""> Setting</p>
+                      <p><input type="checkbox" name="" id=""> Task menu</p>
+                    </div>
+
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-success" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-success">Add</button>
+                </div>
+              </div>
+
+            </form>
+
+
+          </div>
+        </div>
+        <!--  Add New Modal:end -->
+      </li>
+      <li> <i class="fas fa-search"></i>
+      <li> <i class="fas fa-bell"></i> </li>
+    </ul>
+  </header>
+
+  <!-- admin table  -->
+  <section class="admin-content">
+    <table width="100%" class="admin-table">
+      <tr>
+        <th width="12%">ID<i class="fas fa-arrow-down"></i></th>
+        <th width="25%">Name</th>
+        <th width="34%">Email</th>
+        <th width="18%">Verified</th>
+        <th width="11%">&nbsp;</th>
+      </tr>
+      <tr>
+        <td>#1</td>
+        <td>Emir Wicks</td>
+        <td>emir.wicks@mail.com</td>
+        <td>YES</td>
+        <td>
+          <i class="fas fa-eye mr-25"></i>
+          <i class="fas fa-pen"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>#2</td>
+        <td>Emir Wicks</td>
+        <td>emir.wicks@mail.com</td>
+        <td>YES</td>
+        <td>
+          <i class="fas fa-eye mr-25"></i>
+          <i class="fas fa-pen"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>#3</td>
+        <td>Emir Wicks</td>
+        <td>emir.wicks@mail.com</td>
+        <td>YES</td>
+        <td>
+          <i class="fas fa-eye mr-25"></i>
+          <i class="fas fa-pen "></i>
+        </td>
+      </tr>
+      <tr>
+        <td>#4</td>
+        <td>Emir Wicks</td>
+        <td>emir.wicks@mail.com</td>
+        <td>YES</td>
+        <td>
+          <i class="fas fa-eye mr-25"></i>
+          <i class="fas fa-pen "></i>
+        </td>
+      </tr>
+      <tr>
+        <td>#5</td>
+        <td>Emir Wicks</td>
+        <td>emir.wicks@mail.com</td>
+        <td>YES</td>
+        <td>
+          <i class="fas fa-eye mr-25"></i>
+          <i class="fas fa-pen "></i>
+        </td>
+      </tr>
+      <tr>
+        <td>#6</td>
+        <td>Emir Wicks</td>
+        <td>emir.wicks@mail.com</td>
+        <td>YES</td>
+        <td>
+          <i class="fas fa-eye mr-25"></i>
+          <i class="fas fa-pen "></i>
+        </td>
+      </tr>
+      <tr>
+        <td>#7</td>
+        <td>Emir Wicks</td>
+        <td>emir.wicks@mail.com</td>
+        <td>YES</td>
+        <td>
+          <i class="fas fa-eye mr-25"></i>
+          <i class="fas fa-pen "></i>
+        </td>
+      </tr>
+      <tr>
+        <td>#8</td>
+        <td>Emir Wicks</td>
+        <td>emir.wicks@mail.com</td>
+        <td>YES</td>
+        <td>
+          <i class="fas fa-eye mr-25"></i>
+          <i class="fas fa-pen "></i>
+        </td>
+      </tr>
+      <tr>
+        <td>#9</td>
+        <td>Emir Wicks</td>
+        <td>emir.wicks@mail.com</td>
+        <td>YES</td>
+        <td>
+          <i class="fas fa-eye mr-25"></i>
+          <i class="fas fa-pen "></i>
+        </td>
+      </tr>
+      <tr>
+        <td>#10</td>
+        <td>Emir Wicks</td>
+        <td>emir.wicks@mail.com</td>
+        <td>YES</td>
+        <td>
+          <i class="fas fa-eye mr-25"></i>
+          <i class="fas fa-pen "></i>
+        </td>
+      </tr>
+
+    </table>
+
+
+  </section>
+
+  <!-- footer:paging-->
+  <footer class="paging-nav $primary d-flex justify-content-end">
+    <ul class="pagination border pagination-sm">
+      <li class="page-item">
+        <a class="page-link" href="#">&lt;</a>
+        <!-- icon無法適用:size不合 -->
+        <!-- <i class="material-icons icon">keyboard_arrow_left</i> -->
+
+      </li>
+      <li class="page-item active"><a class="page-link " href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#"> &gt;</a>
+        </li>
+    </ul>
+  </footer>
+  
+</main>
+ 
+
+    
+  </div>
+
+  
+
+  
+  <section class="script">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"></script>
+  </section> 
+  
+  </body>
+
+</html>
