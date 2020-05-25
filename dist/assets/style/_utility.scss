@@ -1,0 +1,63 @@
+// utility
+.fz-h2 {
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: bold;
+}
+.fz-24h33 {
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: bold;
+}
+.fz-20h33 {
+  font-size: 20px;
+  line-height: 33px;
+  font-weight: bold;
+}
+.fz-16h24 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+}
+.fz-14h24 {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: $font-weight-regular;
+}
+.fz-14h21 {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: $font-weight-regular;
+}
+.fz-12h24 {
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: $font-weight-regular; //500
+}
+.bold {
+  font-weight: bold;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+.mb-24 {
+  margin-bottom: 24px;
+}
+.mb-32 {
+  margin-bottom: 32px;
+}
+.pl-16 {
+  padding-left: 16px;
+}
+.py-18{
+  padding-top:18px;
+  padding-bottom:18px;
+}
+.py-32{
+  padding-top:32px;
+  padding-bottom:32px;
+}
+.mr-25 {
+  margin-right: 25px;
+}

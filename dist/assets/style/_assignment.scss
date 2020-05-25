@@ -1,0 +1,38 @@
+.dropdown-menu{
+    width:auto;
+}
+.list-color {
+    background-color:$primary-lighter;
+    border: 1px bolid $primary-light;
+}
+.list-group-item-action:active{
+    background-color:$primary-lighter;
+}
+.text-muter{
+    color:$gray-500;
+}
+code{
+    color: $primary;
+    background-color: $primary-lighter;
+}   
+.download-zip{
+    display: block;
+    line-height: 40px;
+    width: 176px;
+    text-align: center;
+    background-color: $primary-lighter;
+    border:1px solid $primary-light;
+}
+.material-icons{
+    vertical-align: middle;
+}
+.bg-primary-lighter{
+    background-color:$primary-lighter;
+    border: 1px bolid $primary-light;
+}
+.media>img{
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+}
+
